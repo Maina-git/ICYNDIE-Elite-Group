@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(19, 2, 51);
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.desktop-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 3px 10px;
+    transition: background 0.3s;
+}
+
+.desktop-menu li a:hover {
+    background: white;
+    color: rgb(13, 4, 43);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.closebtn {
+    display: none;
+    color:white;
+    font-size:25px;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: rgb(19, 2, 51);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    list-style: none;
+}
+
+.mobile-menu li {
+    margin: 20px 0;
+    a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    }
+}
+
+.mobile-menu.show {
+    display: flex;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; 
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .closebtn{
+        display:none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+}
+
+.main {
+    text-align: center;
+    padding: 2em;
+    background: rgb(25, 25, 44);
+    color: white;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Gradient overlay */
+        url("images/car-6761801_1280.jpg "); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    min-height: 80vh;
+}
+
+
+.main h1 {
+    font-size: 50px;
+    margin: 30px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.main p {
+    font-size: 15px;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+
+#products {
+    padding: 2em;
+    text-align: center;
+    background:rgb(58, 8, 43);
+    color: white;
+}
+
+#products h2 {
+    font-size: 25px;
+    margin: 30px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+}
+
+.product-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-position: center;
+}
+
+.product-item h3 {
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    color: rgb(19, 2, 51);
+}
+
+.add-to-purchase, .more-info {
+    margin-top: 1em;
+    padding: 10px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    background-color: rgb(139, 5, 68);
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-purchase:hover, .more-info:hover {
+    background-color: #555;
+}
+
+.services {
+    padding: 2em;
+    background-color: cadetblue;
+    text-align: center;
+}
+.services h2{
+    color:white;
+    font-size:30px;
+}
+
+.serviceflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px;
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    h1{
+        font-size:30px;
+        color:rgb(13, 4, 43);
+    }
+}
+
+.events {
+    padding: 20px;
+    background: rgb(47, 88, 57);
+    color: white;
+    text-align: center;
+}
+.events h2{
+    font-size:30px;
+    margin:10px 0;
+}
+
+.eventitems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-item {
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    color: black;
+}
+.event-item h1{
+    font-size:25px;
+    margin:10px;
+}
+
+
+.team {
+    padding: 30px;
+    background-color: rgb(13, 4, 43);
+    text-align: center;
+    color: white;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    margin: 30px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgb(139, 5, 68);
+}
+
+/* Footer Section */
+.footer {
+    padding: 30px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    height:200px;
+}
+
